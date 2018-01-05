@@ -1,0 +1,20 @@
+import numpy 
+
+class Node(object):
+
+	# attributes for a node are its weight, its position in the lattice, and the coordinates of its edges if you imagine a box around the node 
+	def __init__(self, edgeLeft, edgeTop, edgeRight, edgeBottom):
+		self.edgeLeft = edgeLeft
+		self.edgeTop = edgeTop
+		self.edgeRight = edgeRight
+		self.edgeBottom = edgeBottom
+
+
+	# initialise the weights to small random variables
+	def InitialiseWeights(self):
+		self.weight = 0.5
+		print("The weight of the node is: " + str(self.weight))
+
+if __name__ == "__main__":
+	x = Node(1,2,3,1)
+	x.InitialiseWeights() 
